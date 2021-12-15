@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;300;600&display=swap');
+
+:root {
+    
+    --purple: #5280E2;
+    --green: #15CDCB;
+    --bg-dark: #212226;
+    --light-grey: #E0DEDE;
+    
+    --menu-height: 75px;
+
+}
+
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    margin: 0;
+    background: var(--bg-dark);
+}
+
+body, button, input, select, textarea {
+
+    font-family: "poppins", sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h1, h2 {
+    margin:0;
+    font-weight:400;
+}
+p {
+    color: var(--light-grey);
+}
+button {
+    background: var(--purple);   /*purple é a variavel que tem a cor azul*/
+    border: 0;
+    border-radius: 16px;        /*aredondar o quadrado*/
+    padding: 8px 35px;          /*altura e comprimento*/
+    color: white;             /*cor do nome*/
+    font-weight: bold;          /*a fonte do butão*/
+    font-size: 18px;            /*tamanho da conte*/
+
+}
+
+header{
+   
+    height: calc(100vh - var(--menu-height));
+    display: flex;
+    align-items: center;
+}
+
+header .container{
+    width: 50%;
+    height: fit-content;
+    padding: 0 100px;
+
+ }
+
+ header .container h1{
+     color: var(--green);
+ }
+
+ header .container button {
+     margin: 40px;
+ }
+
+ nav {
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+     height: var(--menu-height);
+     background: var(--bg-dark); /*chamou a variavel dark para quando subir o menu ficar destacado*/
+     padding: 0 100px;
+     position: sticky;
+     top:0;
+
+ }
+
+ nav img {
+     height: 45px;
+ }
+
+ nav ul a {
+     font-size: 24px;
+     color: var(--green);
+     text-decoration: none; /*tirou a linha embaixo do nome*/
+     margin: 0 35px;
+
+ }
+
+ section {
+     height: 1500px;
+     background: purple;
+ }
