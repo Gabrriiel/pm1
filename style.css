@@ -46,10 +46,17 @@ button {
     border: 0;
     border-radius: 16px;        /*aredondar o quadrado*/
     padding: 8px 35px;          /*altura e comprimento*/
-    color: white;             /*cor do nome*/
     font-weight: bold;          /*a fonte do butão*/
     font-size: 18px;            /*tamanho da conte*/
 
+}
+
+.title-purple {
+    color: var(--purple);
+}
+
+.title-green {
+    color: var(--green)
 }
 
 header{
@@ -69,10 +76,6 @@ header .container{
  header .container img {
      display: none;
 
- }
-
- header .container h1{
-     color: var(--green);
  }
 
  header .container button {
@@ -114,10 +117,25 @@ nav ul {
     display: none;
  }
 
- section {
-     height: 1500px;
-     background: purple;
+ .about-me {
+     display: flex;
+     padding: 100px;
  }
+
+ .about-me .container {
+     width:50%;
+     padding-right: 50px;
+ }
+
+ .about-me .img-container {
+     width: 50%;
+     text-align: center;
+ }
+
+ .about-me .img-container img {
+     width: 70%;
+ }
+
 
  /* RESPONSIVIDADE */
 
@@ -167,6 +185,10 @@ nav ul {
         padding: 0 40px;
     }
     nav {
+        position: fixed;
+        width: 100%;
+        bottom:0;
+        top: unset;
         padding: 0 15px;
     }
 
