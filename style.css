@@ -93,6 +93,8 @@ header .container{
      position: sticky;
      top:0;
 
+     z-index: 99;
+
  }
 
  nav img {
@@ -136,6 +138,7 @@ nav ul {
  .about-me .img-container img {
      width: 70%;
      height: 100%;
+     object-fit: cover;
      
  }
 
@@ -170,6 +173,24 @@ nav ul {
     nav {
         padding: 0 30px;
     }
+
+    .about-me {
+        flex-direction: column;
+
+    }
+
+    .about-me .container, .img-container {
+        width: 100%;
+    }
+
+    .about-me .container {
+        padding-right: 0;
+    }
+
+    .about-me .img-container {
+        margin: 70px 0;
+    }
+
 }
 
 /* tablet */
@@ -215,6 +236,10 @@ nav ul a {
 nav ul a svg {
     display: block;
     margin: 0 auto 10px;
+}
+
+.about-me {
+    padding: 40px;
 }
 
 }
