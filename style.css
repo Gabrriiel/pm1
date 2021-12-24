@@ -6,6 +6,7 @@
     --green: #15CDCB;
     --bg-dark: #212226;
     --light-grey: #E0DEDE;
+    --medium-gray: #2F3034;
     
     --menu-height: 75px;
 
@@ -13,6 +14,10 @@
 
 * {
     box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth; /*melhorando o scroll de rolagem*/
 }
 
 html, body {
@@ -47,8 +52,24 @@ button {
     border-radius: 16px;        /*aredondar o quadrado*/
     padding: 8px 35px;          /*altura e comprimento*/
     font-weight: bold;          /*a fonte do butão*/
-    font-size: 18px;            /*tamanho da conte*/
+    font-size: 18px;            /*tamanho da fonte*/
+    cursor: pointer;            /*mudar o cursor quando passar por cima*/
 
+}
+
+.secondary-button {
+    background: var(--medium-gray);
+    border: 1px solid var(--purple);
+    color: var(--green);
+    font-weight: bold;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+}
+
+.secondary-button img {
+    margin-right: 15px;
 }
 
 .title-purple {
@@ -157,9 +178,197 @@ nav ul {
      color: var(--green);
  }
 
- /* RESPONSIVIDADE */
+ /*AQUI INICIA A PARTE DE SERVIÇOS*/
 
-@media (max-width: 1000px) {
+.services {
+    text-align: center;
+    margin: 150px 0;
+    padding: 0 100px;
+}
+
+.services-container, .portfolio-container {  /*aqui tbm estou usando as classes para o portfoilio*/
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto 0;
+
+}
+
+.services .services-container .service-card {
+    max-width: 360px;
+    background: #2F3034;
+    border: 1px solid var(--purple);
+    border-radius: 16px;
+    padding: 40px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.services .services-container .service-card img {
+    margin-bottom: 40px;
+    width: 90px;
+}
+
+.service-card + .service-card {
+    margin-left: 10px;
+}
+
+/* AQUI INICIA A PARTE DO PORTFOLIO */
+
+.portfolio {
+    padding: 0 100px;
+    margin-bottom: 100px;
+    height: 800px;
+    text-align: center; /* VAI CENTRALIZAR NO MEIO DA PAGINA*/
+    background: url('assets/bg.png');
+
+}
+
+.portfolio .portfolio-container{
+    margin-top: 130px;
+}
+
+.portfolio .portfolio-container .portfolio-card {
+    background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(42px);
+    border: 1px solid white;
+
+    border-radius: 16px;
+    max-width: 360px;
+    text-align: left;
+    padding: 50px 25px ;
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container {
+    margin: 0 25px 50px;
+    position: relative;
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container img {
+    width: 100%;
+
+}
+
+.portfolio-container .portfolio-card .img-container .line {
+    
+        width: calc(100% + 24px);
+        height: calc(100% + 24px);
+        border: 1px solid var(--green);
+        border-radius: 16px;
+        transform: rotate(-1.93deg);
+        
+        position: absolute;
+        top: -12px;
+        left: calc( 50% - 100%/2 - 12px);
+  
+}
+
+.portfolio .portfolio-container .portfolio-card .language-container  {
+    margin-bottom: 20px;
+
+}
+
+.portfolio .portfolio-container .portfolio-card .language-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio .portfolio-container .portfolio-card .language-container ul li {
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 16px;
+    padding: 3px 15px;
+
+}
+
+.portfolio-card .language-container ul li + li {
+    margin-left: 10px;
+}
+
+.portfolio-card + .portfolio-card {
+    margin-left: 10px;
+
+}
+p {
+    margin: 0;
+}
+
+/* AQUI INICIA A PARTE DO CURRICULUM */
+
+.curriculum {
+    padding: 0 100px;
+    text-align: center;
+}
+
+.curriculum .container {
+    display: flex;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.curriculum .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    
+}
+
+.curriculum .container .content .curriculum-info {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 1rem;
+    margin-bottom: 50px;
+}
+
+.contact {
+    max-width: 700px;
+    margin: 150px auto 70px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contact h1{
+    width: fit-content;
+    margin: 0 auto 40px;
+    background: -webkit-linear-gradient(#15cdcb, #5280e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact button {
+    margin: 40px auto;
+}
+
+.contact .social-midia {
+    max-width: 360px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+ /* RESPONSIVIDADE */
+ /* INICIA AS CONFIGURAÇOES PARA TABLET E CELULAR */
+/* smarll desktop */
+
+@media (max-width: 1000px) { /* Aqui determina o tamanho da tela para organização */
     header .container{
         
         width: 100%;
@@ -193,8 +402,71 @@ nav ul {
 
 }
 
+
+/* RESPONSIVIDADE INICIA SERVIÇOS */
+
+.services, .portfolio {
+    padding: 0;
+}
+
+            
+.services .services-container   {  /*VERIFICA TEM UM ERRO QUE NA CENTRALIZA*/
+    
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    
+   
+}
+
+.service-card {
+    height: 394px;
+}
+
+.service-card + .service-card {
+    margin-left: 0;
+    margin-top: 30px;
+}
+
+/* RESPONSIVIDADE INICIA PORTFOLIO */
+
+
+.portfolio .portfolio-container {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center; 
+}
+
+.portfolio-card + .portfolio-card, .portfolio-card + .portfolio-card {
+    margin-left: 0;
+    margin-top: 30px;
+}
+
+.portfolio {
+    height: 100%;
+
+}
+
+/* RESPONSIVIDADE INICIA CURRICULUM */
+
+.curriculum .container {
+    flex-wrap: wrap;
+
+}
+
+.curriculum .container .curriculum-img {
+    display: block;
+    margin: 0 auto 50px;
+    width: 100%;
+    max-width: 520px;
+}
+
+
+
+
+
 /* tablet */
- @media (max-width: 767px) {
+ @media (max-width: 767px) { /* Aqui determina o tamanho da tela para organização */
  
     header .container img {
         display: inline;
@@ -218,7 +490,10 @@ nav ul {
 
  /* celular*/
 
- @media (max-width: 480px) {
+ @media (max-width: 480px) { /* Aqui determina o tamanho da tela para organização */
+     body {
+         margin-bottom: calc(var(--menu-height) + 50px);
+     }
     header .container {
         padding: 0 40px;
     }
@@ -240,6 +515,33 @@ nav ul a svg {
 
 .about-me {
     padding: 40px;
+}
+
+/*RESPONSIVIDADE CELULAR DO SERVIÇOS*/
+
+.services {
+    margin:70px 0;
+}
+
+.services .services-container .portfolio-container {
+    padding: 0 20px;
+}
+
+/*RESPONSIVIDADE CELULAR DO PORTFOLIO*/
+
+.portfolio .portfolio-container {
+    margin-top: 70px;
+}
+.portfolio {
+    margin: 100px 0 50px;
+}
+
+.curriculum {
+    padding: 0 20px;
+}
+
+.curriculum .container .content .curriculum-info {
+    padding: 0 15px;
 }
 
 }
