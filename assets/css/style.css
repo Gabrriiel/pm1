@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;300;600&display=swap');
 
 :root {
-    
+
     --purple: #5280E2;
     --green: #15CDCB;
     --bg-dark: #212226;
     --light-grey: #E0DEDE;
     --medium-gray: #2F3034;
-    
+
     --menu-height: 75px;
 
 }
@@ -17,7 +17,8 @@
 }
 
 html {
-    scroll-behavior: smooth; /*melhorando o scroll de rolagem*/
+    scroll-behavior: smooth;
+    /*melhorando o scroll de rolagem*/
 }
 
 html, body {
@@ -40,20 +41,29 @@ h2 {
 }
 
 h1, h2 {
-    margin:0;
-    font-weight:400;
+    margin: 0;
+    font-weight: 400;
 }
+
 p {
     color: var(--light-grey);
 }
+
 button {
-    background: var(--purple);   /*purple é a variavel que tem a cor azul*/
+    background: var(--purple);
+    /*purple é a variavel que tem a cor azul*/
     border: 0;
-    border-radius: 16px;        /*aredondar o quadrado*/
-    padding: 8px 35px;          /*altura e comprimento*/
-    font-weight: bold;          /*a fonte do butão*/
-    font-size: 18px;            /*tamanho da fonte*/
-    cursor: pointer;            /*mudar o cursor quando passar por cima*/
+    border-radius: 16px;
+    /*aredondar o quadrado*/
+    padding: 8px 35px;
+    /*altura e comprimento*/
+    font-weight: bold;
+    /*a fonte do butão*/
+    font-size: 18px;
+    /*tamanho da fonte*/
+    margin-left: 0 !important;
+    cursor: pointer;
+    /*mudar o cursor quando passar por cima*/
 
 }
 
@@ -80,47 +90,48 @@ button {
     color: var(--green)
 }
 
-header{
-   
+header {
+
     height: calc(100vh - var(--menu-height));
     display: flex;
     align-items: center;
 }
 
-header .container{
+header .container {
     width: 50%;
     height: fit-content;
     padding: 0 100px;
 
- }
+}
 
- header .container img {
-     display: none;
+header .container img {
+    display: none;
 
- }
+}
 
- header .container button {
-     margin: 40px;
+header .container button {
+    margin: 40px;
 
- }
+}
 
- nav {
-     display:flex;
-     align-items: center;
-     justify-content: space-between;
-     height: var(--menu-height);
-     background: var(--bg-dark); /*chamou a variavel dark para quando subir o menu ficar destacado*/
-     padding: 0 100px;
-     position: sticky;
-     top:0;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--menu-height);
+    background: var(--bg-dark);
+    /*chamou a variavel dark para quando subir o menu ficar destacado*/
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
 
-     z-index: 99;
+    z-index: 99;
 
- }
+}
 
- nav img {
-     height: 45px;
- }
+nav img {
+    height: 45px;
+}
 
 nav ul {
     width: 100%;
@@ -128,57 +139,58 @@ nav ul {
     justify-content: space-around;
 }
 
- nav ul a {
-     font-size: 24px;
-     color: var(--green);
-     text-decoration: none; /*tirou a linha embaixo do nome*/
-     
+nav ul a {
+    font-size: 24px;
+    color: var(--green);
+    text-decoration: none;
+    /*tirou a linha embaixo do nome*/
 
- }
 
- nav ul a svg {
+}
+
+nav ul a svg {
     display: none;
- }
+}
 
- .about-me {
-     display: flex;
-     padding: 100px;
- }
+.about-me {
+    display: flex;
+    padding: 100px;
+}
 
- .about-me .container {
-     width:50%;
-     padding-right: 50px;
- }
+.about-me .container {
+    width: 50%;
+    padding-right: 50px;
+}
 
- .about-me .img-container {
-     width: 50%;
-     text-align: center;
-     position: relative;
- }
+.about-me .img-container {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
 
- .about-me .img-container img {
-     width: 70%;
-     height: 100%;
-     object-fit: cover;
-     
- }
+.about-me .img-container img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
 
- .about-me .img-container .line {
+}
+
+.about-me .img-container .line {
     width: calc(70% + 50px);
     height: calc(100% + 50px);
     border: 1px solid var(--purple);
 
     position: absolute;
     top: -25px;
-    left: calc( 50% - 70%/2 - 25px);
- }
+    left: calc(50% - 70%/2 - 25px);
+}
 
- .about-me .img-container .line.green {
-     transform: rotate(-3.3deg);
-     color: var(--green);
- }
+.about-me .img-container .line.green {
+    transform: rotate(-3.3deg);
+    color: var(--green);
+}
 
- /*AQUI INICIA A PARTE DE SERVIÇOS*/
+/*AQUI INICIA A PARTE DE SERVIÇOS*/
 
 .services {
     text-align: center;
@@ -186,7 +198,8 @@ nav ul {
     padding: 0 100px;
 }
 
-.services-container, .portfolio-container {  /*aqui tbm estou usando as classes para o portfoilio*/
+.services-container, .portfolio-container {
+    /*aqui tbm estou usando as classes para o portfoilio*/
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -213,7 +226,7 @@ nav ul {
     width: 90px;
 }
 
-.service-card + .service-card {
+.service-card+.service-card {
     margin-left: 10px;
 }
 
@@ -223,12 +236,13 @@ nav ul {
     padding: 0 100px;
     margin-bottom: 100px;
     height: 800px;
-    text-align: center; /* VAI CENTRALIZAR NO MEIO DA PAGINA*/
+    text-align: center;
+    /* VAI CENTRALIZAR NO MEIO DA PAGINA*/
     background: url('assets/bg.png');
 
 }
 
-.portfolio .portfolio-container{
+.portfolio .portfolio-container {
     margin-top: 130px;
 }
 
@@ -241,7 +255,7 @@ nav ul {
     border-radius: 16px;
     max-width: 360px;
     text-align: left;
-    padding: 50px 25px ;
+    padding: 50px 25px;
 }
 
 .portfolio .portfolio-container .portfolio-card .img-container {
@@ -255,20 +269,20 @@ nav ul {
 }
 
 .portfolio-container .portfolio-card .img-container .line {
-    
-        width: calc(100% + 24px);
-        height: calc(100% + 24px);
-        border: 1px solid var(--green);
-        border-radius: 16px;
-        transform: rotate(-1.93deg);
-        
-        position: absolute;
-        top: -12px;
-        left: calc( 50% - 100%/2 - 12px);
-  
+
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    border: 1px solid var(--green);
+    border-radius: 16px;
+    transform: rotate(-1.93deg);
+
+    position: absolute;
+    top: -12px;
+    left: calc(50% - 100%/2 - 12px);
+
 }
 
-.portfolio .portfolio-container .portfolio-card .language-container  {
+.portfolio .portfolio-container .portfolio-card .language-container {
     margin-bottom: 20px;
 
 }
@@ -287,14 +301,15 @@ nav ul {
 
 }
 
-.portfolio-card .language-container ul li + li {
+.portfolio-card .language-container ul li+li {
     margin-left: 10px;
 }
 
-.portfolio-card + .portfolio-card {
+.portfolio-card+.portfolio-card {
     margin-left: 10px;
 
 }
+
 p {
     margin: 0;
 }
@@ -319,7 +334,7 @@ p {
     align-items: center;
     text-align: left;
     width: 100%;
-    
+
 }
 
 .curriculum .container .content .curriculum-info {
@@ -336,7 +351,7 @@ p {
     padding: 0 20px;
 }
 
-.contact h1{
+.contact h1 {
     width: fit-content;
     margin: 0 auto 40px;
     background: -webkit-linear-gradient(#15cdcb, #5280e2);
@@ -364,15 +379,15 @@ footer {
 
 
 
- /* RESPONSIVIDADE */
- /* INICIA AS CONFIGURAÇOES PARA TABLET E CELULAR */
+/* RESPONSIVIDADE */
+/* INICIA AS CONFIGURAÇOES PARA TABLET E CELULAR */
 /* smarll desktop */
 
-@media (max-width: 1000px) { /* Aqui determina o tamanho da tela para organização */
-    header .container{
-        
+@media (max-width: 1000px) {
+
+    /* Aqui determina o tamanho da tela para organização */
+    header .container {
         width: 100%;
-        
     }
 
     nav ul a {
@@ -385,7 +400,6 @@ footer {
 
     .about-me {
         flex-direction: column;
-
     }
 
     .about-me .container, .img-container {
@@ -400,51 +414,54 @@ footer {
         margin: 70px 0;
     }
 
-}
 
 
-/* RESPONSIVIDADE INICIA SERVIÇOS */
 
-.services, .portfolio {
-    padding: 0;
-}
+    /* RESPONSIVIDADE INICIA SERVIÇOS */
 
-            
-.services .services-container   {  /*VERIFICA TEM UM ERRO QUE NA CENTRALIZA*/
-    
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    align-items: center;
-    
-   
-}
-
-.service-card {
-    height: 394px;
-}
-
-.service-card + .service-card {
-    margin-left: 0;
-    margin-top: 30px;
-}
-
-/* RESPONSIVIDADE INICIA PORTFOLIO */
+    .services, .portfolio {
+        padding: 0;
+    }
 
 
-.portfolio .portfolio-container {
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    align-items: center; 
-}
+    .services .services-container {
+        /*VERIFICA TEM UM ERRO QUE NA CENTRALIZA*/
 
-.portfolio-card + .portfolio-card, .portfolio-card + .portfolio-card {
-    margin-left: 0;
-    margin-top: 30px;
-}
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
 
-.portfolio {
-    height: 100%;
 
+    }
+
+    .service-card {
+        height: 394px;
+    }
+
+    .service-card+.service-card {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+
+    /* RESPONSIVIDADE INICIA PORTFOLIO */
+
+
+    .portfolio .portfolio-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-card+.portfolio-card, .portfolio-card+.portfolio-card {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .portfolio {
+        height: 100%;
+
+    }
 }
 
 /* RESPONSIVIDADE INICIA CURRICULUM */
@@ -466,8 +483,9 @@ footer {
 
 
 /* tablet */
- @media (max-width: 767px) { /* Aqui determina o tamanho da tela para organização */
- 
+@media (max-width: 767px) {
+    /* Aqui determina o tamanho da tela para organização */
+
     header .container img {
         display: inline;
         margin-bottom: 70px;
@@ -486,62 +504,86 @@ footer {
     nav ul a {
         font-size: 16px;
     }
- }
+}
 
- /* celular*/
+/* celular*/
 
- @media (max-width: 480px) { /* Aqui determina o tamanho da tela para organização */
-     body {
-         margin-bottom: calc(var(--menu-height) + 50px);
-     }
+@media (max-width: 480px) {
+
+    /* Aqui determina o tamanho da tela para organização */
+    body {
+        margin-bottom: calc(var(--menu-height) + 50px);
+    }
+
     header .container {
         padding: 0 40px;
     }
+
     nav {
         position: fixed;
         width: 100%;
-        bottom:0;
+        bottom: 0;
         top: unset;
         padding: 0 15px;
     }
 
-nav ul a {
-    font-size: 12px;
-}
-nav ul a svg {
-    display: block;
-    margin: 0 auto 10px;
+    nav ul a {
+        font-size: 12px;
+    }
+
+    nav ul a svg {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .about-me {
+        padding: 40px;
+    }
+
+    /*RESPONSIVIDADE CELULAR DO SERVIÇOS*/
+
+    .services {
+        margin: 70px 0;
+    }
+
+    .services .services-container .portfolio-container {
+        padding: 0 20px;
+    }
+
+    /*RESPONSIVIDADE CELULAR DO PORTFOLIO*/
+
+    .portfolio .portfolio-container {
+        margin-top: 70px;
+    }
+
+    .portfolio {
+        margin: 100px 0 50px;
+    }
+
+    .curriculum {
+        padding: 0 20px;
+    }
+
+    .curriculum .container .content .curriculum-info {
+        padding: 0 15px;
+    }
+
 }
 
-.about-me {
-    padding: 40px;
+
+.buttontop-top:hover {
+    opacity: 1;
+    color: #262626 !important;
+    text-decoration: none !important;
+    transition: .2s;
 }
 
-/*RESPONSIVIDADE CELULAR DO SERVIÇOS*/
-
-.services {
-    margin:70px 0;
+.buttontop-top.buttontop-fade-out {
+    opacity: .5;
 }
 
-.services .services-container .portfolio-container {
-    padding: 0 20px;
-}
-
-/*RESPONSIVIDADE CELULAR DO PORTFOLIO*/
-
-.portfolio .portfolio-container {
-    margin-top: 70px;
-}
-.portfolio {
-    margin: 100px 0 50px;
-}
-
-.curriculum {
-    padding: 0 20px;
-}
-
-.curriculum .container .content .curriculum-info {
-    padding: 0 15px;
-}
-
+.buttontop-top.buttontop-is-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: .2s;
 }
